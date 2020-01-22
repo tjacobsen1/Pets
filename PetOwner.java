@@ -1,48 +1,36 @@
 public class PetOwner {
-    private Dog dog;
-    private Cat cat;
     private String name;
+    private Pet[] pets;
 
-    public PetOwner(String name, Dog dog, Cat cat) {
+    public PetOwner(String name, Pet[] pets) {
         this.name = name;
-        this.dog = dog;
-        this.cat = cat;
+        for(int i = 0; i <= pets.length-1; i++) {
+            this.pets[i] = pets[i];
+        } 
     }
 
     public boolean isHappy() {
-        if (dog.isHappy() && cat.isHappy()) {
-            return true;
-        } else {
-            return false;
+        for (int i = 0; pets.length-1 >= i; i++) {
+            if (!pets[i].isHappy()) {
+                return false;
+            }
         }
+        return true;    
     }
 
     public String getName() {
         return this.name;
     }
 
-    public void petDog() {
-        dog.setPetted();
+    public void petPet(int x) {
+        pets[x].setPetted();
     }
 
-    public void walkDog() {
-        dog.setWalked();
+    public void walkPet(int x) {
+        pets[x].setWalked();
     }
 
-    public void feedDog() {
-        dog.setFed();
+    public void feedPet(int x) {
+        pets[x].setFed();
     }
-
-    public void petCat() {
-        cat.setPetted();
-    }
-
-    public void walkCat() {
-        cat.setWalked();
-    }
-
-    public void feedCat() {
-        cat.setFed();
-    }
-
 }
