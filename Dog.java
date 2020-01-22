@@ -18,7 +18,7 @@ public class Dog {
         return this.gender;
     }
 
-    public String isHappy() {
+    public boolean isHappy() {
         if (fed && petted && walked) {
             return true;
         } else {

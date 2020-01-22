@@ -4,7 +4,6 @@ public class Cat {
     private boolean walked = false;
     private boolean fed = false;
     private boolean petted = false;
-    private boolean happy = false;
 
     public Cat(String name, String gender) {
         this.name = name;
@@ -27,7 +26,7 @@ public class Cat {
         }
     }
 
-    public void setPet() {
+    public void setPetted() {
         petted = true;
     }
     

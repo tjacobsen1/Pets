@@ -1,7 +1,6 @@
 public class PetOwner {
     private Dog dog;
     private Cat cat;
-    private boolean happy = false;
     private String name;
 
     public PetOwner(String name, Dog dog, Cat cat) {
@@ -11,7 +10,7 @@ public class PetOwner {
     }
 
     public boolean isHappy() {
-        if (dog.isHappy && cat.isHappy) {
+        if (dog.isHappy() && cat.isHappy()) {
             return true;
         } else {
             return false;
@@ -22,7 +21,28 @@ public class PetOwner {
         return this.name;
     }
 
-    public boolean getHappy() {
-        return this.happy;
+    public void petDog() {
+        dog.setPetted();
     }
+
+    public void walkDog() {
+        dog.setWalked();
+    }
+
+    public void feedDog() {
+        dog.setFed();
+    }
+
+    public void petCat() {
+        cat.setPetted();
+    }
+
+    public void walkCat() {
+        cat.setWalked();
+    }
+
+    public void feedCat() {
+        cat.setFed();
+    }
+
 }
