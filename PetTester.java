@@ -2,7 +2,8 @@ public class PetTester {
     public static void main(String[] args) {
         Dog dog = new Dog("Rufus", "undecided");
         Cat cat = new Cat("Salami", "yes");
-        Pet[] pets = {dog, cat};
+        Yorkie york = new Yorkie("TK", "Attack Helicopter");
+        Pet[] pets = {dog, cat, york};
         PetOwner owner = new PetOwner("Jefe", pets);
 
         owner.petPet(0);
@@ -12,7 +13,6 @@ public class PetTester {
         
         System.out.println(owner.petTalk(0));
         System.out.println(owner.petTalk(1));
-        
         
     }
 }
