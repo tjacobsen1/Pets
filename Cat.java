@@ -11,4 +11,13 @@ public class Cat extends Pet{
             return false;
         }
     }
+
+    public String talk(){
+        if (isHappy()) {
+            return "meow"; 
+        }
+        else {
+            return "roar";
+        }
+    }
 }

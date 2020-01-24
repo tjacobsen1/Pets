@@ -49,4 +49,8 @@ public class Pet {
     public boolean getPetted() {
         return this.petted;
     }
+
+    public String talk(){
+        return "Bruh";
+    }
 }

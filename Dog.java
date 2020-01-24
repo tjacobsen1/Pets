@@ -4,4 +4,12 @@ public class Dog extends Pet {
         super(name, gender);
     }
 
+    public String talk(){
+        if (isHappy()) {
+            return "WOOF!"; 
+        }
+        else {
+            return "woof";
+        }
+    }
 }

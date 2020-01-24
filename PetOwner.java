@@ -2,10 +2,11 @@ public class PetOwner {
     private String name;
     private Pet[] pets;
 
-    public PetOwner(String name, Pet[] pets) {
+    public PetOwner(String name, Pet[] petList) {
         this.name = name;
-        for(int i = 0; i <= pets.length-1; i++) {
-            this.pets[i] = pets[i];
+        pets = new Pet[petList.length];
+        for(int i = 0; i <= petList.length-1; i++) {
+            this.pets[i] = petList[i];
         } 
     }
 
@@ -32,5 +33,9 @@ public class PetOwner {
 
     public void feedPet(int x) {
         pets[x].setFed();
+    }
+
+    public String petTalk(int x){
+        return pets[x].talk();
     }
 }
