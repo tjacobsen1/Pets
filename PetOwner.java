@@ -1,6 +1,7 @@
 public class PetOwner {
     private String name;
     private Pet[] pets;
+    private boolean hasCorona;
 
     public PetOwner(String name, Pet[] petList) {
         this.name = name;
@@ -8,6 +9,7 @@ public class PetOwner {
         for(int i = 0; i <= petList.length-1; i++) {
             this.pets[i] = petList[i];
         } 
+        this.hasCorona = false;
     }
 
     public boolean isHappy() {
@@ -23,8 +25,15 @@ public class PetOwner {
         return this.name;
     }
 
+    public boolean getCorona(){
+        return this.hasCorona;
+    }
+
     public void petPet(int x) {
         pets[x].setPetted();
+        if(pets[x] instanceof Bat){
+            hasCorona = true;
+        }
     }
 
     public void walkPet(int x) {
@@ -33,9 +42,24 @@ public class PetOwner {
 
     public void feedPet(int x) {
         pets[x].setFed();
+        if(pets[x] instanceof Bat){
+            hasCorona = true;
+        }
     }
 
     public String petTalk(int x){
         return pets[x].talk();
+    }
+
+    public void rideHorse(int x){
+        if(pets[x] instanceof Horse){
+            pets[x].setRode();
+        }
+    }
+
+    public void brushHorse(int x){
+        if(pets[x] instanceof Horse){
+            pets[x].setBrushed();   
+        }
     }
 }

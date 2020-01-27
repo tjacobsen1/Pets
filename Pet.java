@@ -50,6 +50,14 @@ public class Pet {
         return this.petted;
     }
 
+    public void setBrushed(){
+        
+    }
+
+    public void setRode(){
+        
+    }
+
     public String talk(){
         return "Bruh";
     }
