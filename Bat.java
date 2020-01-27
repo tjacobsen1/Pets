@@ -12,5 +12,14 @@ public class Bat extends Pet{
         }
     }
 
+    public String talk(){
+        if (isHappy()) {
+            return "lol you have Corona"; 
+        }
+        else {
+            return "*audible bat noises*";
+        }
+    }
+
 
 }

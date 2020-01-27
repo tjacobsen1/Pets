@@ -9,14 +9,19 @@ public class PetTester {
         Pet[] pets = {dog, cat, york, horse, bat};
         PetOwner owner = new PetOwner("Jefe", pets);
 
-        owner.petPet(0);
-        owner.walkPet(0);
-        owner.feedPet(1);
-        owner.walkPet(1);
+        //owner.petPet(0);
+       // owner.walkPet(0);
+        //owner.feedPet(1);
+        //owner.walkPet(1);
         owner.petPet(4);
+
+        owner.cheatTheSystemAndMakePetHappy(3);
         
         System.out.println(owner.petTalk(0));
         System.out.println(owner.petTalk(1));
+        System.out.println(owner.petTalk(4));
+        System.out.println(owner.petTalk(3));
+
 
         if(owner.getCorona()){
             System.out.println("You have died of Corona");

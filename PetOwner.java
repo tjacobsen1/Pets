@@ -62,4 +62,24 @@ public class PetOwner {
             pets[x].setBrushed();   
         }
     }
+
+    public void cheatTheSystemAndMakePetHappy(int x){
+        feedPet(x);
+        if(pets[x] instanceof Dog) {
+            petPet(x);
+            walkPet(x);
+        }
+        if (pets[x] instanceof Yorkie) {
+            for (int i = 10; i > 0; i--) {
+                petPet(x);
+            }
+            walkPet(x);
+        }
+        if (pets[x] instanceof Horse) {
+            walkPet(x);
+            brushHorse(x);
+            rideHorse(x);
+            petPet(x);
+        }
+    }
 }
